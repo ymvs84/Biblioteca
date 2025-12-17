@@ -1,0 +1,13 @@
+# Archivos de compilación de Maven
+target/
+*.class
+
+# Archivos de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Archivos de sistema y logs
+.DS_Store
+Thumbs.db
+*.log

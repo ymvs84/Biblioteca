@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ymvs84.biblioteca.controller.BibliotecaController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Sistema de Gestión de Biblioteca">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <TableView fx:id="tablaLibros" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+            <TableColumn fx:id="colIsbn" text="ISBN" prefWidth="120" />
+            <TableColumn fx:id="colTitulo" text="Título" prefWidth="200" />
+            <TableColumn fx:id="colAutor" text="Autor" prefWidth="150" />
+            <TableColumn fx:id="colDisponible" text="Disponible" prefWidth="80" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="txtIsbn" promptText="ISBN" prefWidth="120"/>
+        <TextField fx:id="txtTitulo" promptText="Título del libro" prefWidth="200"/>
+        <TextField fx:id="txtAutor" promptText="Autor" prefWidth="150"/>
+        <Button text="Guardar Nuevo" onAction="#onBotonGuardarClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Prestar Libro" onAction="#onBotonPrestarClick" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+        <Button text="Devolver Libro" onAction="#onBotonDevolverClick" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        <Separator orientation="VERTICAL" />
+        <Button text="Eliminar Seleccionado" onAction="#onBotonEliminarClick" style="-fx-background-color: #F44336; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>
